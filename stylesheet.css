@@ -1,0 +1,204 @@
+/* Variables */
+
+:root {
+  --NUTMEG: hsl(14, 45%, 36%);
+  --DARKRASPBERRY: hsl(332, 51%, 32%);
+  --WHITE: hsl(0, 0%, 100%);
+  --ROSEWHITE: hsl(330, 100%, 98%);
+  --EGGSHELL: hsl(30, 54%, 90%);
+  --LIGHTGREY: hsl(30, 18%, 87%);
+  --WENGEBROWN: hsl(30, 10%, 34%);
+  --DARKCHARCOAL: hsl(24, 5%, 18%);
+}
+
+/* CSS Reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Importing Font Families */
+
+@import url("https://fonts.google.com/specimen/Young+Serif");
+@import url("https://fonts.google.com/specimen/Outfit");
+
+/* General Styles */
+
+main {
+  font-family: "Outfit", sans-serif;
+  color: var(--DARKCHARCOAL);
+  padding: 1.5rem;
+  padding-top: 0;
+  line-height: 1.5;
+}
+
+article {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+section {
+  background-color: var(--ROSEWHITE);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.nutmeg {
+  color: var(--NUTMEG);
+}
+
+.wengebrown {
+  color: var(--WENGEBROWN);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Image Styles */
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Heading Styles */
+
+h1 {
+  font-family: "Young Serif", serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Young Serif", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--NUTMEG);
+}
+
+h3 {
+  font-family: "Outfit", sans-serif;
+  color: var(--DARKRASPBERRY);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* List Styles */
+
+ul {
+  margin-left: 0.5em;
+  margin-top: 1.25rem;
+}
+
+ul li {
+  display: grid;
+  grid-template-columns: 2rem auto;
+  align-items: center;
+}
+
+ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+section ul {
+  margin-top: 0.5rem;
+}
+
+.sectionMarker {
+  margin-right: 1.5rem;
+  color: var(--DARKRASPBERRY);
+}
+
+.articleMarker {
+  margin-right: 1.5rem;
+  color: var(--NUTMEG);
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  margin-top: 1.25rem;
+  row-gap: 0.5rem;
+}
+
+ol li {
+  padding-left: 1em;
+}
+
+ol li::marker {
+  color: var(--NUTMEG);
+  font-weight: 700;
+}
+
+/* Table Styles */
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem;
+}
+
+.row:not(:last-child),
+article {
+  border-bottom: 1px solid var(--LIGHTGREY);
+}
+
+#nutrition {
+  border: none;
+  padding-bottom: 0;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--EGGSHELL);
+    align-items: center;
+  }
+
+  main {
+    width: 50%;
+    background-color: var(--WHITE);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-bottom: 4.5rem;
+  }
+
+  header {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 50%;
+    background-color: var(--WHITE);
+    margin-top: 4.5rem;
+  }
+
+  img {
+    width: calc(100% - 3rem);
+    border-radius: 0.75rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
